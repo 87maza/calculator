@@ -2,31 +2,36 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Martin Maza | Web Developer</title>
+    <title>Martin Maza | CalculatorJS</title>
         <meta name="description" content="">
         <link rel="icon" type="image/png" sizes="16x16" href="images/android-icon-192x192.png"> 
         <link rel="stylesheet" href="css/style.css">  
         <script src="js/script.js"></script>
-
   </head>
-
 <body>
-	<div id="screen"></div>
+	<form action="calculator">
+		<input name="screen" placeholder="0" class="screen">
+		<br>
+		<input type="button" value="7" onClick="document.calculator.scree.value =+ 7">
+		<input type="button" value="8" onClick="document.calculator.scree.value =+ 8">
+		<input type="button" value="9" onClick="document.calculator.scree.value =+ 9">
+		<input type="button" value="+" onClick="add()">
+		<br>
+		<input type="button" value="4" onClick="document.calculator.scree.value =+ 4">
+		<input type="button" value="5" onClick="document.calculator.scree.value =+ 5">
+		<input type="button" value="6" onClick="document.calculator.scree.value =+ 6">
+		<input type="button" value="-" onClick="subtract()">
+		<br>
+		<input type="button" value="1" onClick="document.calculator.scree.value =+ 1">
+		<input type="button" value="2" onClick="document.calculator.scree.value =+ 2">
+		<input type="button" value="3" onClick="document.calculator.scree.value =+ 3">
+		<input type="button" value="*" onClick="mulitply()">
+		<br>
+		<input type="button" value="0" onClick="document.calculator.scree.value =+ 0">
+		<input type="button" value="/" onClick="divide()">
+		<input type="button" value="." onClick="decimal()">
+		<input type="button" value="%" onClick="percentage()">
+		<br>
 
-	<span class = "1">1</span>
-	<span class = "2">2</span>
-	<span class = "3">3</span>
-	<span class = "4">4</span>
-	<span class = "5">5</span>
-	<span class = "6">6</span>
-	<span class = "7">7</span>
-	<span class = "8">8</span>
-	<span class = "9">9</span>
-	<span class = "0">0</span>
-	<span class = "add">+</span>
-	<span class = "subtract">-</span>
-	<span class = "multiply">/</span>
-	<span class = "divide">*</span>
-	<span class = "equals">=</span>
-	<span class = "decimal">.</span>
+	</form>
 </body>
