@@ -6,9 +6,9 @@ function printToScreen(x){
 }
 
 function add(){
-	var num1 = parseInt(display.value);
+	var num1 = parseFloat(display.value);
 	var oper = "+";
-	var num2 = 
+	var num2 = parseFloat(display.value);
 }
 
 function calculate(){
@@ -18,4 +18,15 @@ function calculate(){
 function clear(x){
 	// display.value === 0;
 	// console.log(display.value);
+}
+
+function decimal(){
+	var dotCheck = display.value
+	if (dotCheck.indexOf(".") >= 0) {
+		return;
+	}
+	else {
+		dotCheck + ".";
+	}
+
 }
