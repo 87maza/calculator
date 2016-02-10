@@ -6,32 +6,36 @@
         <meta name="description" content="">
         <link rel="icon" type="image/png" sizes="16x16" href="images/android-icon-192x192.png"> 
         <link rel="stylesheet" href="css/style.css">  
-        <script src="js/script.js"></script>
+        
   </head>
 <body>
-	<form action="calculator">
-		<input name="screen" placeholder="0" class="screen">
+	<form>
+		<input name="screen" id="screen" disabled>
 		<br>
-		<input type="button" value="7" onClick="document.calculator.scree.value =+ 7">
-		<input type="button" value="8" onClick="document.calculator.scree.value =+ 8">
-		<input type="button" value="9" onClick="document.calculator.scree.value =+ 9">
-		<input type="button" value="+" onClick="add()">
+		<input type="button" id="button" value="7" onClick="printToScreen('7')">
+		<input type="button" id="button" value="8" onClick="printToScreen('8')">
+		<input type="button" id="button" value="9" onClick="printToScreen('9')">
+		<input type="button" id="button" value="+" onClick="add()">
 		<br>
-		<input type="button" value="4" onClick="document.calculator.scree.value =+ 4">
-		<input type="button" value="5" onClick="document.calculator.scree.value =+ 5">
-		<input type="button" value="6" onClick="document.calculator.scree.value =+ 6">
-		<input type="button" value="-" onClick="subtract()">
+		<input type="button" id="button" value="4" onClick="printToScreen('4')">
+		<input type="button" id="button" value="5" onClick="printToScreen('5')">
+		<input type="button" id="button" value="6" onClick="printToScreen('6')">
+		<input type="button" id="button" value="-" onClick="subtract()">
 		<br>
-		<input type="button" value="1" onClick="document.calculator.scree.value =+ 1">
-		<input type="button" value="2" onClick="document.calculator.scree.value =+ 2">
-		<input type="button" value="3" onClick="document.calculator.scree.value =+ 3">
-		<input type="button" value="*" onClick="mulitply()">
+		<input type="button" id="button" value="1" onClick="printToScreen('1')">
+		<input type="button" id="button" value="2" onClick="printToScreen('2')">
+		<input type="button" id="button" value="3" onClick="printToScreen('3')">
+		<input type="button" id="button" value="X" onClick="mulitply()">
 		<br>
-		<input type="button" value="0" onClick="document.calculator.scree.value =+ 0">
-		<input type="button" value="/" onClick="divide()">
-		<input type="button" value="." onClick="decimal()">
-		<input type="button" value="%" onClick="percentage()">
+		<input type="button" id="button" value="0" onClick="printToScreen('0')">
+		<input type="button" id="button" value="/" onClick="divide()">
+		<input type="button" id="button" value="." onClick="decimal()">
+		<input type="button" id="button" value="=" onClick="calculate()">
 		<br>
+		<input type="button" id="button" value="C" onClick="clear('C')">
 
 	</form>
+
 </body>
+</html>
+<script src="js/script.js"></script>
