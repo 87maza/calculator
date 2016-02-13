@@ -15,10 +15,14 @@ function calculate(){
 
 }
 
-function clear(x){
-	// display.value === 0;
-	// console.log(display.value);
-}
+var clear = document.getElementById('clear');
+clear.addEventListener('click', function(){
+	//clear button temp fix, i tried using the html onclick, but it never worked, hand rolled vanilla js works
+	display.value = '';
+	console.log("ipressedc");
+});	
+
+
 
 function decimal(){
 	var dotCheck = display.value
