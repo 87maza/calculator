@@ -25,12 +25,16 @@ clear.addEventListener('click', function(){
 
 
 function decimal(){
+	console.log("ipresseddec");
 	var dotCheck = display.value
 	if (dotCheck.indexOf(".") >= 0) {
+		console.log(dotCheck.indexOf("."));
 		return;
 	}
 	else {
-		dotCheck + ".";
+		dotCheck += ".";
+		// console.log("passed else");
+		// console.log(dotCheck.indexOf(".");
 	}
 
 }
