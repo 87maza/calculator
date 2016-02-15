@@ -40,8 +40,8 @@ input[type=button]
     box-shadow:-1px 2px #6E6B6A inset;
 }
 
-/*#button, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal{*/
-#button, #oper, #equals, #decimal{
+#button, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal{
+/*#button, #oper, #equals, #decimal{*/
 	width: 60px;
 	height: 60px;
 	font-size: 24px;
