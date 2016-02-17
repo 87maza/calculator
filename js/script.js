@@ -1,7 +1,6 @@
-var display = document.getElementById("screen");
-var result;
-var num1;
-var num2;
+var display = document.getElementById("screen");  //grabs input screen stores it in a variable
+var result;  //establish this variable for the calculate() function
+var num1, num2;
 	var oper = {
 		'+': function(a, b) {
 	        return a + b;
@@ -16,13 +15,17 @@ var num2;
 	        return a - b;
 	    }
 	}
+	//object-oriented for simpler operation commands
+
 function printToScreen(x){
 	display.value += x;
 	//+= because you concatenate the strings when x is greater than single digits
+	//function will concatenate the numbers as strings and log onto the screen  tied to onclick() html
 }
 
 var add = document.getElementById('add');
 add.addEventListener('click', function(){
+	//on click, num1 is established and turned in the a decimal friendly number, operator is established by button and screen is cleared
 	num1 = parseFloat(display.value);
 	sign = add.value;
 	display.value='';
@@ -51,6 +54,7 @@ multiply.addEventListener('click', function(){
 
 var equals = document.getElementById('equals');
 equals.addEventListener('click',function(){
+	//on click, num2 is established, parameters are set for the NaN and other catch-alls
 	num2 = parseFloat(display.value);
 	if (num2 === 0 && sign === divide.value){
 		display.value = "don't divide by 0";
@@ -73,22 +77,6 @@ equals.addEventListener('click',function(){
 	display.value = result;
 });
 
-//old command to make things work
-// var add = document.getElementById('add');
-// add.addEventListener('click', function(){
-// 	num1 = parseFloat(display.value);
-// 	var oper = "+";
-// 	display.value = ""
-// 	return;
-// });
-// var equals = document.getElementById('equals');
-// equals.addEventListener('click',function(){
-// 	num2 = parseFloat(display.value);
-
-// }
-
-
-
 var clear = document.getElementById('clear');
 clear.addEventListener('click', function(){
 	//clear button temp fix, i tried using the html onclick, but it never worked, hand rolled vanilla js works
@@ -97,20 +85,3 @@ clear.addEventListener('click', function(){
 	console.log("ipressedc");
 });	
 
-
-
-// var decimal = document.getElementById('decimal');
-// decimal.addEventListener('click', function(){
-// 	console.log("ipresseddec");
-// 	var dotCheck = display.value;
-// 	if (dotCheck.indexOf(".") >= 0) {
-// 		console.log(dotCheck.indexOf("."));
-// 		return;
-// 	}
-// 	else {
-// 		dotCheck += ".";
-// 		// console.log("passed else");
-// 		// console.log(dotCheck.indexOf(".");
-// 	}
-
-// });
