@@ -73,6 +73,7 @@ equals.addEventListener('click',function(){
 	}
 	console.log(num1 + sign + num2);
 	result = parseFloat(oper[sign](num1,num2));
+	//result established decimal friendly and uses the operation objects
 	console.log(result);
 	display.value = result;
 });
