@@ -1,4 +1,5 @@
 var display = document.getElementById("screen");  //grabs input screen stores it in a variable
+display.value = "0";
 var result;  //establish this variable for the calculate() function
 var num1, num2;
 	var oper = {
@@ -18,6 +19,9 @@ var num1, num2;
 	//object-oriented for simpler operation commands
 
 function printToScreen(x){
+	if (display.value === "0") {
+		display.value = '';
+	}
 	display.value += x;
 	//+= because you concatenate the strings when x is greater than single digits
 	//function will concatenate the numbers as strings and log onto the screen  tied to onclick() html
@@ -86,3 +90,18 @@ clear.addEventListener('click', function(){
 	console.log("ipressedc");
 });	
 
+var decimal = document.getElementById('decimal');
+decimal.addEventListener('click', function(){
+	var dotCheck = display.value
+		if(dotCheck.indexOf('.') === -1) {
+			display.value = dotCheck += ".";
+			console.log(dotCheck);
+			if (display.value === NaN) {
+				display.value = "0."
+			}
+		}
+		else{
+			dotCheck = display.value;
+			console.log('no more decimals brah')
+		}
+});
