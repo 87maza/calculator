@@ -1,4 +1,5 @@
 var display = document.getElementById("screen");  //grabs input screen stores it in a variable
+var cons = document.getElementById("screen2");
 display.value = "0";
 var result;  //establish this variable for the calculate() function
 var num1, num2;
@@ -23,6 +24,7 @@ function printToScreen(x){
 		display.value = '';
 	}
 	display.value += x;
+	cons.value += x;
 	//+= because you concatenate the strings when x is greater than single digits
 	//function will concatenate the numbers as strings and log onto the screen  tied to onclick() html
 }
@@ -33,6 +35,7 @@ add.addEventListener('click', function(){
 	num1 = parseFloat(display.value);
 	sign = add.value;
 	display.value='';
+	cons.value = num1 + sign;
 });
 
 var subtract = document.getElementById('subtract');
@@ -40,6 +43,7 @@ subtract.addEventListener('click', function(){
 	num1 = parseFloat(display.value);
 	sign = subtract.value;
 	display.value='';
+	cons.value = num1 + sign;
 });
 
 var divide = document.getElementById('divide');
@@ -47,6 +51,7 @@ divide.addEventListener('click', function(){
 	num1 = parseFloat(display.value);
 	sign = divide.value;
 	display.value='';
+	cons.value = num1 + sign;
 });
 
 var multiply = document.getElementById('multiply');
@@ -54,6 +59,7 @@ multiply.addEventListener('click', function(){
 	num1 = parseFloat(display.value);
 	sign = multiply.value;
 	display.value='';
+	cons.value = num1 + sign;
 });
 
 var equals = document.getElementById('equals');
@@ -75,11 +81,12 @@ equals.addEventListener('click',function(){
 			}
 
 	}
-	console.log(num1 + sign + num2);
+
 	result = parseFloat(oper[sign](num1,num2));
 	//result established decimal friendly and uses the operation objects
 	console.log(result);
 	display.value = result;
+	cons.value = num1 + sign + num2 + "=" + result;
 });
 
 var clear = document.getElementById('clear');
