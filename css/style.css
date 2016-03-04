@@ -1,18 +1,35 @@
 /*===============================
 GENERAL STYLES (page background color)
 ================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
 html{
+  position: relative;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /*background-color: #ccc;*/
+  background-image: url("http://cdn1.theodysseyonline.com/files/2016/02/05/635902432513304132-1588574950_italy_grunge_flag_1440x900_by_qian12.jpg");
+  height: 100vh;
+   max-width: 1140px; /*this is the only value that is absolute and in px*/
+  margin: 0 auto; /*all our rows will be centered*/
+    background-repeat: no-repeat;
+  background-size: cover;
 }
 body{
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  background-image: url("http://7-themes.com/data_images/out/68/7002981-grunge-italian-flag.jpg");
 }
+
+
+
+
 
 /*===============================
 HEADINGS
@@ -40,8 +57,8 @@ CALCULATOR BODY STYLES
   align-items: center;
   
   /*I know its an italian flag not the mexican flag, its missing the eagle in the center*/
-  border-radius: 3px;
-  padding: 20px 20px 9px;
+/*  border-radius: 3px;
+  padding: 20px 20px 9px;*/
 }
 
 
