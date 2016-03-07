@@ -124,6 +124,7 @@ negative.addEventListener('click', function(){
 	}
 	if (negClick === true) {
 		negClick=false;
+		display.value = display.value.slice(1, display.value.length);
 		console.log("negative sign is off");
 		return;
 	}
