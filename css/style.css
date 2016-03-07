@@ -13,10 +13,9 @@ html{
   position: relative;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  /*background-color: #ccc;*/
-  background-image: url("http://cdn1.theodysseyonline.com/files/2016/02/05/635902432513304132-1588574950_italy_grunge_flag_1440x900_by_qian12.jpg");
+
+  background-image: url("http://www.epicenternetwork.eu/wp-content/uploads/slider-wd/6078030705_6ae37bb1f6_b.jpg");
   height: 100vh;
-   max-width: 1140px; /*this is the only value that is absolute and in px*/
   margin: 0 auto; /*all our rows will be centered*/
     background-repeat: no-repeat;
   background-size: cover;
@@ -38,13 +37,19 @@ h1{
   font-weight: 200;
   font-size: 25px;
 }
-h1 span{
+.js{
   background: #ffe680;
   text-align: right;
   font-weight: 400;
   font-size: 26px;
-
 }
+.brand{
+  vertical-align: super;
+  font-weight: 800;
+  font-size: 12px;
+  font-style: italic;
+}
+
 
 
 /*===============================
@@ -82,7 +87,7 @@ input[type=button]
   top: -1px;
 }
 
-#button, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal{
+#button, #clear, #add, #multiply, #subtract, #divide, #equals, #decimal, #negative{
 /*#button, #oper, #equals, #decimal{*/
   width: 60px;
   height: 60px;

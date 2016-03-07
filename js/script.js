@@ -112,3 +112,19 @@ decimal.addEventListener('click', function(){
 			console.log('no more decimals brah')
 		}
 });
+
+var negClick = false;
+var negative = document.getElementById('negative');
+negative.addEventListener('click', function(){
+	if (negClick === false) {
+		display.value = "-" + display.value;
+		negClick = true;
+		console.log("neg sign is on");
+		return;
+	}
+	if (negClick === true) {
+		negClick=false;
+		console.log("negative sign is off");
+		return;
+	}
+});
